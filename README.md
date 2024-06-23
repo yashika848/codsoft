@@ -1,2 +1,2 @@
 # codsoft
-This my first intership
+This is my first intership
