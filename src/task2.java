@@ -15,10 +15,15 @@ import java.util.Scanner;
                     int e = sc.nextInt();
 
                     int sum = (a + b + c + d + e);
-                    System.out.println("The sum of the marks is" + "=" + sum);
-                    int percentage = (sum) / 5;
+                    {
+                        System.out.println("The sum of the marks is" + "=" + sum);
+                    }int percentage = (sum) / 5;{
+                    System.out.println("The percentage of marks is" + "=" + percentage+"%");
+                }
+            if(percentage>=90 && percentage<=100) {
+
             System.out.println("your Grade is Excellent" + "=" + "A+");
-        }
+        }else if(percentage>70 && percentage<=89){
 
             System.out.println("your Grade is very good"+"="+"B+");
 
