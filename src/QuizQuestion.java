@@ -1,7 +1,7 @@
 import java.util.*;
 import java. util.Scanner;
 public class QuizQuestion {
-    private static Map<String, Quiz> quizzes = new HashMap<>();
+    private static final Map<String, Quiz> quizzes = new HashMap<>();
 
     public void main(String[] args) {
         int i=0;
