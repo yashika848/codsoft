@@ -29,7 +29,7 @@ public class QuizQuestion {
         }
     }
 
-    private static void createQuiz(Scanner scanner) {
+        private static void createQuiz (Scanner scanner){
         System.out.println("Enter the name of quiz:");
         String quizName = scanner.nextLine();
         Quiz quiz = new Quiz(quizName);
