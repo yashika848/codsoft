@@ -3,30 +3,34 @@ import java. util.Scanner;
 public class QuizQuestion {
     private static final Map<String, Quiz> quizzes = new HashMap<>();
 
-    public void main(String[] args) {
-        int i=0;
-        int j=0;
+    public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        label:
         while (true) {
             System.out.println("Enter a command:(create,take,view,list,exit)");
             String command = scanner.nextLine();
-            if (command.equals("create")) {
-                createQuiz(scanner);
-            } else if (command.equals("take")) {
-                takeQuiz(scanner);
-            } else if (command.equals("view")) {
-                viewQuiz(scanner);
-            } else if (command.equals("exit")) {
-                break;
-            } else {
-                System.out.println("Invalid command");
+            switch (command) {
+                case "create":
+                    createQuiz(scanner);
+                    break;
+                case "take":
+                    takeQuiz(scanner);
+                    break;
+                case "view":
+                    viewQuiz(scanner);
+                    break;
+                case "exit":
+                    break label;
+                default:
+                    System.out.println("Invalid command");
+                    break;
             }
         }
 
     }
 
-    private void createQuiz(Scanner scanner) {
+    private static void createQuiz(Scanner scanner) {
         System.out.println("Enter the name of quiz:");
         String quizName = scanner.nextLine();
         Quiz quiz = new Quiz(quizName);
@@ -105,9 +109,9 @@ public class QuizQuestion {
 
     }
 
-    class Quiz {
-        private String name;
-        private List<Question> questions = new ArrayList<>();
+    static class Quiz {
+        private final String name;
+        private final List<Question> questions = new ArrayList<>();
 
         public Quiz(String name) {
             this.name = name;
@@ -132,10 +136,10 @@ public class QuizQuestion {
         }
     }
 
-    class Question {
-        private String question;
-        private List<String> choices;
-        private int correctChoice;
+    static class Question {
+        private final String question;
+        private final List<String> choices;
+        private final int correctChoice;
 
         public Question(String question, List<String> choices, int correctChoice) {
             this.question = question;
