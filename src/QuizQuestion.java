@@ -27,7 +27,6 @@ public class QuizQuestion {
                     break;
             }
         }
-
     }
 
     private static void createQuiz(Scanner scanner) {
