@@ -8,7 +8,7 @@ public class QuizQuestion {
         Scanner scanner = new Scanner(System.in);
         label:
         while (true) {
-            System.out.println("Enter a command:(create,take,view,list,exit)");
+            System.out.println("Enter a command:(create,take,view,,exit)");
             String command = scanner.nextLine();
             switch (command) {
                 case "create":
